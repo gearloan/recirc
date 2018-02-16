@@ -7,6 +7,8 @@ body {
 }
 h3 {
   font-family: serif;
+  margin-top: -4px;
+  margin-bottom: 4px;
 }
 ul {
   list-style: none;
@@ -24,6 +26,9 @@ ul {
   letter-spacing: 2px;
   color:#01abe9;
 }
+.grey-type {
+  color:#bbb;
+}
 /////////////////////
 /////////////////////
  * {
@@ -36,11 +41,11 @@ ul {
 }
  a:link, a:hover, a:active, a:visited {
 	 transition: color 150ms;
-	 color: #95a5a6;
+	 color: #bbb;
 	 text-decoration: none;
 }
  a:hover {
-	 color: #7f8c8d;
+	 color: #eee;
 	 text-decoration: underline;
 }
  .recirculation {
@@ -49,8 +54,14 @@ ul {
    font-family: sans-serif;
    padding: 15px;
    overflow:hidden;
+   h2, h3 {
+     font-size: 17px;
+     span {
+      color:#bbb;
+      font-style:italic;
+     }
+   }
    h2 {
-     font-size: 16px;
      font-family: serif;
      position: absolute;
      top:7px;
@@ -63,11 +74,13 @@ ul {
        font-size:14px;
      }
    }
+
 }
  .row {
-	 overflow: scroll;
-	 width: 102%;
+   overflow-x: scroll;
+   width: 102%;
    position: relative;
+   overflow-y: hidden;
   &:nth-child(2) {
     background: #222;
     width: 101vw;
@@ -81,7 +94,7 @@ ul {
 	 transition: 450ms transform;
 	 font-size: 0;
 	 white-space: nowrap;
-	 margin: 40px 0;
+	 margin: 35px 0;
    padding-left:25px
 }
  .tile {
@@ -95,11 +108,22 @@ ul {
 	 cursor: pointer;
 	 transition: 450ms all;
 	 transform-origin: center left;
+   background-color: #444;
 }
  .tile__img {
 	 width: 250px;
 	 height: 140.625px;
 	 object-fit: cover;
+   opacity: .7;
+}
+.tile-headline {
+  position: absolute;
+  top: 50px;
+  left: 20px;
+  font-size: 14px;
+  font-weight: bold;
+  padding: 0 20px;
+  transition: 450ms opacity;
 }
  .tile__details {
 	 position: absolute;
@@ -109,7 +133,7 @@ ul {
 	 top: 0;
 	 font-size: 10px;
 	 opacity: 0;
-	 background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0) 100%);
+	 background: linear-gradient(to top, rgba(0,0,0,0.9) 0%, rgba(0,0,0,0.65) 30%, rgba(0,0,0,0) 100%);
 	 transition: 450ms opacity;
 }
 .title-overlay {
@@ -151,12 +175,22 @@ ul {
  .tile:hover .tile__details {
 	 opacity: 1;
 }
+.tile:hover .tile-headline {
+  opacity: 0.3;
+}
  .tile__title {
    width: 100%;
    //font-size:14px;
 	 position: absolute;
-	 bottom: 20px;
+	 top: 50px;
 	 padding: 0 40px;
+}
+.tile-inner-headline {
+  width: 100%;
+  //font-size:14px;
+  position: absolute;
+  top: 15px;
+  padding: 0 40px;
 }
  .row__inner:hover {
 	 transform: translate3d(-62.5px, 0, 0);
@@ -178,19 +212,18 @@ ul {
   display: flex;
   justify-content: center;
   li {
-    background-color:#444;
     width:20%;
     min-height: 320px;
     margin: 5px;
     text-align: center;
     padding: 140px 0;
+    background-repeat:no-repeat;
+    background-size:contain;
     &:nth-child(even) {
       background-image:asset_url('guide-2.jpg');
-      background-size:cover;
     }
     &:nth-child(odd) {
       background-image:asset_url('guide-1.jpg');
-      background-size:cover;
     }
   }
 }
