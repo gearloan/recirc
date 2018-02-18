@@ -58,3 +58,5 @@ gem "haml-rails", "~> 1.0"
 gem 'rails_12factor', group: :production
 
 ruby "2.4.1"
+
+gem 'jquery-rails'

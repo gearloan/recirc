@@ -1,0 +1,329 @@
+.guides {
+  display: flex;
+  justify-content: center;
+  //white-space: nowrap;
+  flex-wrap: wrap;
+  overflow-x: scroll;
+  height: 312px;
+  overflow-y: hidden;
+  margin-top:14px;
+  //padding: 0 140px;
+
+  .guide-headline {
+    //z-index: 3;
+    position: absolute;
+    top:0;
+    left:0;
+    padding:30px;
+    text-align: initial;
+    font-size: 14px;
+    line-height: 1.2;
+    height:100%;
+    width:100%;
+  }
+  #TowerPoly {
+    fill-opacity:1;
+    transition: all .4s;
+  }
+  .guide-trigger {
+    #TowerPoly {
+      fill-opacity:0;
+    }
+    .card__overlay {
+      width: 620px;
+      height: 620px;
+      top: calc(50% - 310px);
+      left: calc(50% - 310px);
+    }
+    .card__overlay-water {
+      width: 620px;
+      height: 620px;
+      top: calc(50% - 310px);
+      left: calc(50% - 310px);
+    }
+  }
+  .hover-trigger {
+    &.radio-tower {
+      .card__overlay--1 { animation: pulse 5s linear infinite; }
+      .card__overlay--2 { animation: pulse 3s linear infinite; }
+      .card__overlay--3 { animation: pulse 8s linear infinite; }
+    }
+    &.water-stomp {
+      @keyframes ripplemotion {
+          0% {transform: scale(1); opacity:1}
+          80% {transform: scale(2.4); opacity:0}
+          100% {transform: scale(2.4); opacity:0}
+      }
+
+      @keyframes ripplemotion2 {
+          0% {transform: scale(1); opacity:1}
+          10% {transform: scale(1); opacity:1}
+          90% {transform: scale(2.2); opacity:0}
+          100% {transform: scale(2.2); opacity:0}
+      }
+
+      @keyframes ripplemotion3 {
+          0% {transform: scale(1); opacity:1}
+          20% {transform: scale(1); opacity:1}
+          100% {transform: scale(2); opacity:0}
+      }
+
+      #BackRipple1 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay:  1.8s;
+      }
+
+      #BackRipple2 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion2;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1.8s;
+      }
+
+      #BackRipple3 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion3;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1.8s;
+      }
+
+      #FrontRipple1 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1.8s;
+      }
+
+      #FrontRipple2 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion2;
+        animation-duration: 2.5s;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-delay: 1.8s;
+      }
+
+      #FrontRipple3 {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: ripplemotion3;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: 1.8s;
+      }
+
+      @keyframes bobblemotion {
+        0% {transform: translateY(0px)}
+        20% {transform: translateY(0px)}
+        95% {transform: translateY(-18px)}
+        100% {transform: translateY(0)}
+      }
+
+      @keyframes bobblemotion2 {
+        0% {opacity:0}
+        25% {opacity:0}
+        97% {opacity:0.9}
+        100% {opacity:0}
+      }
+
+      #BlockOver {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: bobblemotion;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: -0.5s;
+      }
+
+      #BlockUnder {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: bobblemotion;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: -0.5s;
+      }
+
+      #AngryRed {
+        transform-origin: 50% 50%;
+        animation-timing-function: cubic;
+        animation-name: bobblemotion2;
+        animation-duration: 2.5s;
+        animation-iteration-count: infinite;
+        animation-delay: -0.5s;
+      }
+    }
+  }
+  li {
+    position: relative;
+    white-space: initial;
+    //width:25%;
+    min-height: 300px;
+    min-width:200px;
+    margin: 5px;
+    text-align: center;
+    padding: 30px 20px;
+    background-color: #222;
+    background-repeat:no-repeat;
+    background-size:contain;
+    overflow: hidden;
+    cursor: pointer;
+    .gh-posterior {
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      top:0;
+      left:0;
+    }
+    &:nth-child(1) {
+      //background-image:asset_url('guide-cards-1.png');
+      //background-image: url(https://images.unsplash.com/photo-1432839318976-b5c5785ce43f?dpr=2&fit=crop&fm=jpg&h=900&ixlib=rb-0.3.5&q=50&w=1700);
+      background-color: #888;
+      .guide-headline {
+        opacity: .8;
+      }
+    }
+    &:nth-child(2) {
+      background-image:asset_url('guide-2.jpg');
+      .guide-headline {
+        background-image:asset_url('guide-cards-2.png');
+        background-size:contain;
+        background-color: #444;
+        z-index:100;
+        //margin-top: 100%;
+        animation: slideUp .2s ease-in forwards;
+      }
+      .gh-posterior-1 { background-color:rgba(68,68,68,0.8); animation: slideUp .9s ease-out forwards;}
+      .gh-posterior-2 { background-color:rgba(68,68,68,0.7); animation: slideUp .9s ease-out forwards;}
+      .gh-posterior-3 { background-color:rgba(68,68,68,0.6); animation: slideUp .9s ease-out forwards;}
+      &:hover {
+        .guide-headline { animation: slideDown .3s ease-out forwards; }
+        .gh-posterior-1 { animation: slideDown .375s ease-out forwards; }
+        .gh-posterior-2 { animation: slideDown .45s ease-out forwards; }
+        .gh-posterior-3 { animation: slideDown .6s ease-out forwards; }
+      }
+
+    }
+    &:nth-child(3) {
+      .guide-headline {
+        opacity: .6;
+      }
+      &:hover {
+        .guide-headline {
+        }
+      }
+    }
+    &:nth-child(4) {
+      background-image:asset_url('guide-2.jpg');
+      .guide-headline {
+        background-image:asset_url('guide-cards-4.png');
+        background-size:contain;
+        background-color: #444;
+        animation: slideLeft .2s ease-in forwards;
+      }
+      .gh-posterior-1,.gh-posterior-2,.gh-posterior-3 { animation: slideLeft .1s ease-out forwards; }
+      &:hover {
+        .guide-headline { background-color:rgba(68,68,68,0.8); animation: slideRight .3s ease-out forwards; }
+        .gh-posterior-1 { background-color:rgba(68,68,68,0.7); animation: slideRight .45s ease-out forwards; }
+        .gh-posterior-2 { background-color:rgba(68,68,68,0.6); animation: slideRight .5s ease-out forwards; }
+        .gh-posterior-3 { background-color:rgba(68,68,68,0.5); animation: slideRight .7s ease-out forwards; }
+      }
+    }
+    .card__overlay-water {
+      position: absolute;
+    	background-color: #2e4f61;
+    	z-index: 2;
+      cursor: pointer;
+      transform: rotate(45deg);
+      top: calc(50% - 1.5px);
+      left: calc(50% - 1.5px);
+      width: 1px;
+      height: 1px;
+    }
+    .card__overlay-water--1 {
+
+      opacity: .2;
+      transition: all .3s ease;
+    }
+    .card__overlay-water--2 {
+
+      opacity: .4;
+      transition: all .6s ease;
+    }
+    .card__overlay-water--3 {
+      opacity: .6;
+      transition: all .9s ease;
+    }
+
+
+    .card__overlay {
+    	position: absolute;
+    	border-radius: 50%;
+    	background-color: #111;
+    	z-index: 2;
+    	transition: all .9s;
+      cursor: pointer;
+    }
+
+    .card__overlay--1 {
+    	top: calc(50% - 1.5px);
+    	left: calc(50% - 1.5px);
+    	width: 3px;
+    	height: 3px;
+    	opacity: .6;
+    	transition: all .3s ease;
+    }
+
+    .card__overlay--2 {
+    	top: calc(50% - 12.5px);
+    	left: calc(50% - 12.5px);
+    	width: 25px;
+    	height: 25px;
+    	opacity: .4;
+    	transition: all .6s ease;
+    }
+
+    .card__overlay--3 {
+    	top: calc(50% - 25px);
+    	left: calc(50% - 25px);
+    	width: 50px;
+    	height: 50px;
+    	opacity: .2;
+    	transition: all .9s ease;
+    }
+  }
+  @keyframes pulse {
+  	0% { box-shadow: none;}
+  	25% { box-shadow: 0 0 0 6px #002f5a; }
+    50% { box-shadow: 0 0 0 12px #202f3d; }
+  	75% { box-shadow: 0 0 0 6px #002f5a; }
+  	100% { box-shadow: none;}
+  }
+  @keyframes slideDown {
+    0% {margin-top: 0;}
+    100% {margin-top: 115%;}
+  }
+  @keyframes slideUp {
+    0% {margin-top: 115%;}
+    100% {margin-top: 0%;}
+  }
+  @keyframes slideRight {
+    0% {margin-left: 0;}
+    100% {margin-left: 100%;}
+  }
+  @keyframes slideLeft {
+    0% {margin-left: 100%;}
+    100% {margin-left: 0%;}
+  }
+}

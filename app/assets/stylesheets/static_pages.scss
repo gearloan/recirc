@@ -1,7 +1,3 @@
-body {
-  background: #333;
-  color:#fff;
-}
 * {
   box-sizing:border-box;
 }
@@ -51,8 +47,9 @@ ul {
  .recirculation {
 	 width: 100%;
    color: #ecf0f1;
+   background: #333;
    font-family: sans-serif;
-   padding: 15px;
+   padding: 0 15px 15px 15px;
    overflow:hidden;
    h2, h3 {
      font-size: 17px;
@@ -207,23 +204,3 @@ ul {
 }
 /////////////
 /////////////
-
-.guides {
-  display: flex;
-  justify-content: center;
-  li {
-    width:20%;
-    min-height: 320px;
-    margin: 5px;
-    text-align: center;
-    padding: 140px 0;
-    background-repeat:no-repeat;
-    background-size:contain;
-    &:nth-child(even) {
-      background-image:asset_url('guide-2.jpg');
-    }
-    &:nth-child(odd) {
-      background-image:asset_url('guide-1.jpg');
-    }
-  }
-}
