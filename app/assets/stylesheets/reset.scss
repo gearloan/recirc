@@ -62,6 +62,7 @@ ul {
      font-family: serif;
      position: absolute;
      top:7px;
+     margin-left: 24px;
      &.category-header {
        position:absolute;
        font-family: sans-serif;
@@ -73,19 +74,27 @@ ul {
    }
 
 }
+.hide-scrollbar {
+  overflow: hidden;
+  width: 101vw;
+  height:210.6px;
+  padding:0 2vw;
+  margin: 0 -2vw;
+ }
  .row {
    overflow-x: scroll;
-   width: 102%;
+   margin: 0px -2vw;
    position: relative;
    overflow-y: hidden;
-  &:nth-child(2) {
-    background: #222;
-    width: 101vw;
-    margin: 0px -2vw;
-    padding: 0 2vw;
-    margin-bottom: 16px;
+   &:nth-child(1) {
+     //width:100%;
+     height:calc(100% + 15px);
    }
-}
+   &:nth-child(2) {
+     background: #222;
+     margin-bottom: 16px;
+    }
+  }
 
  .row__inner {
 	 transition: 450ms transform;
