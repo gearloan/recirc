@@ -53,20 +53,25 @@ ul {
    overflow:hidden;
    h2, h3 {
      font-size: 17px;
+     opacity: .7;
      span {
       color:#bbb;
       font-style:italic;
      }
+   }
+   h3 {
+    padding-left: 8px;
    }
    h2 {
      font-family: serif;
      position: absolute;
      top:7px;
      margin-left: 24px;
+     padding: 5px 0;
+
      &.category-header {
        position:absolute;
        font-family: sans-serif;
-       padding: 8px 0;
        text-transform: uppercase;
        font-weight: bold;
        font-size:14px;
@@ -75,35 +80,36 @@ ul {
 
 }
 .hide-scrollbar {
+  position: relative;
   overflow: hidden;
   width: 101vw;
   height:210.6px;
   padding:0 2vw;
   margin: 0 -2vw;
- }
- .row {
-   overflow-x: scroll;
-   margin: 0px -2vw;
-   position: relative;
-   overflow-y: hidden;
-   &:nth-child(1) {
-     //width:100%;
-     height:calc(100% + 15px);
+  &:nth-child(2) {
+    margin-bottom: 16px;
+    background: #222;
    }
-   &:nth-child(2) {
-     background: #222;
-     margin-bottom: 16px;
-    }
-  }
+  .row {
+    overflow-x: scroll;
+    margin: 0px -2vw;
+    position: relative;
+    overflow-y: hidden;
+    height:calc(100% + 15px);
+   }
 
- .row__inner {
-	 transition: 450ms transform;
-	 font-size: 0;
-	 white-space: nowrap;
-	 margin: 35px 0;
-   padding-left:25px
+  .row__inner {
+    transition: 450ms transform;
+    font-size: 0;
+    white-space: nowrap;
+    margin: 35px 0;
+    padding-left:25px
+  }
 }
- .tile {
+
+
+
+  .tile {
    white-space: initial;
 	 position: relative;
 	 display: inline-block;

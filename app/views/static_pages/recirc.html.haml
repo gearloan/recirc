@@ -1,13 +1,13 @@
 =image_tag('article-1.jpg', :class => 'fake-article-img')
 %section.recirculation
   .hide-scrollbar
+    %h2
+      Stories Related to:
+      %span
+        =link_to 'Pete Flint,', '#'
+        =link_to 'Trulia,', '#'
+        =link_to 'disruptive technology', '#'
     .row
-      %h2
-        Stories Related to:
-        %span
-          =link_to 'Pete Flint,', '#'
-          =link_to 'Trulia,', '#'
-          =link_to 'disruptive technology', '#'
       .row__inner
         .tile
           .tile__media
@@ -114,9 +114,9 @@
               %br
               =link_to 'read >', '#'
   .hide-scrollbar
+    %h2.category-header
+      Technology News
     .row
-      %h2.category-header
-        Technology News
       .row__inner
         .tile
           .tile__media
