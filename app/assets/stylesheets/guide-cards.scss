@@ -4,7 +4,7 @@
   //white-space: nowrap;
   flex-wrap: wrap;
   overflow-x: scroll;
-  height: 312px;
+  height: 412px;
   overflow-y: hidden;
   margin-top:14px;
   //padding: 0 140px;
@@ -14,10 +14,10 @@
     position: absolute;
     top:0;
     left:0;
-    padding:30px;
+    padding:30px 50px;
     text-align: initial;
-    font-size: 14px;
-    line-height: 1.2;
+    font-size: 16px;
+    line-height: 1.4;
     height:100%;
     width:100%;
   }
@@ -40,6 +40,9 @@
       height: 620px;
       top: calc(50% - 310px);
       left: calc(50% - 310px);
+    }
+    .guide-under {
+      opacity: 1;
     }
   }
   .hover-trigger {
@@ -169,11 +172,11 @@
     position: relative;
     white-space: initial;
     //width:25%;
-    min-height: 300px;
-    min-width:200px;
+    min-height: 400px;
+    min-width:260px;
     margin: 5px;
     text-align: center;
-    padding: 30px 20px;
+    //padding: 30px 20px;
     background-color: #222;
     background-repeat:no-repeat;
     background-size:contain;
@@ -186,6 +189,20 @@
       top:0;
       left:0;
     }
+    .guide-under {
+      width: 100%;
+      height: 100%;
+      transition: opacity .6s;
+      background-size: contain;
+      background-image:asset_url('guide-2-grey.png');
+      background-color: #262626;
+      background-repeat: no-repeat;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 5;
+    }
     &:nth-child(1) {
       //background-image:asset_url('guide-cards-1.png');
       //background-image: url(https://images.unsplash.com/photo-1432839318976-b5c5785ce43f?dpr=2&fit=crop&fm=jpg&h=900&ixlib=rb-0.3.5&q=50&w=1700);
@@ -193,9 +210,10 @@
       .guide-headline {
         opacity: .8;
       }
+
     }
     &:nth-child(2) {
-      background-image:asset_url('guide-2.jpg');
+      background-image:asset_url('guide-2.png');
       .guide-headline {
         background-image:asset_url('guide-cards-2.png');
         background-size:contain;
@@ -216,6 +234,10 @@
 
     }
     &:nth-child(3) {
+      .guide-under {
+        background-image:asset_url('guide-2-blu.jpg');
+        background-color: #2d4654;
+      }
       .guide-headline {
         opacity: .6;
       }
@@ -226,6 +248,7 @@
     }
     &:nth-child(4) {
       background-image:asset_url('guide-2.jpg');
+      background-color: #262626;
       .guide-headline {
         background-image:asset_url('guide-cards-4.png');
         background-size:contain;
