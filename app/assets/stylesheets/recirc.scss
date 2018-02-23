@@ -2,7 +2,7 @@
   box-sizing:border-box;
 }
 h3 {
-  font-family: serif;
+  font-family: "harrietbold";
   margin-top: -4px;
   margin-bottom: 4px;
 }
@@ -53,17 +53,22 @@ ul {
    overflow:hidden;
    h2, h3 {
      font-size: 17px;
-     opacity: .7;
-     span {
-      color:#bbb;
-      font-style:italic;
-     }
+     //opacity: .7;
+
    }
    h3 {
     padding-left: 8px;
+    font-size: 72px;
+    text-transform: uppercase;
+    color:#349ec7;
+    margin: -18px 0 -9px 0;
+    span {
+     color:#eee;
+     font-family:"hli";
+    }
    }
    h2 {
-     font-family: serif;
+     font-family: "harrietBold";
      position: absolute;
      top:7px;
      margin-left: 24px;
@@ -71,7 +76,7 @@ ul {
 
      &.category-header {
        position:absolute;
-       font-family: sans-serif;
+       font-family: "baltoBold";
        text-transform: uppercase;
        font-weight: bold;
        font-size:14px;
@@ -91,10 +96,10 @@ ul {
       .tile-media {
         //opacity: .7;
       }
-      background:#333;
+      background:#000;
       .tile__img {
         //mix-blend-mode: multiply;
-        opacity: .4;
+        opacity: 1;
       }
     }
   }
@@ -116,11 +121,11 @@ ul {
       margin-left: -2.5%;
       h2 {
         margin: 0;
-        font-family: serif;
+        font-family: "hli";
         font-weight: normal;
-        font-style: italic;
-        background: rgba(255,255,255,1);
-        color: #000;
+//        font-style: italic;
+        background: rgba(52,158,199,.9);
+        color: #fff;
         padding: 15px;
       }
     }
@@ -164,6 +169,7 @@ ul {
    opacity: .6;
 }
 .tile-headline {
+  font-family: "baltoBold";
   position: absolute;
   top: 50px;
   left: 0px;
@@ -171,6 +177,7 @@ ul {
   font-weight: bold;
   padding: 0 20px;
   transition: 450ms opacity;
+  color: #fff;
 }
  .tile__details {
 	 position: absolute;

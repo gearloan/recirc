@@ -204,16 +204,19 @@
       z-index: 5;
     }
     &:nth-child(1) {
-      //background-image:asset_url('guide-cards-1.png');
-      //background-image: url(https://images.unsplash.com/photo-1432839318976-b5c5785ce43f?dpr=2&fit=crop&fm=jpg&h=900&ixlib=rb-0.3.5&q=50&w=1700);
+      background-image:asset_url('guide-cards-1.png');
       background-color: #6e6e6e;
+      background-size: cover;
       .guide-headline {
         opacity: .8;
       }
-
+      .guide-under {
+        background-image:asset_url('guide-2-a.png');
+      }
     }
     &:nth-child(2) {
       background-image:asset_url('guide-2.png');
+      background-size: cover;
       .guide-headline {
         background-image:asset_url('guide-cards-2.png');
         background-size:contain;
@@ -234,6 +237,8 @@
 
     }
     &:nth-child(3) {
+      background-image:asset_url('guide-cards-3.png');
+      background-size: cover;
       .guide-under {
         background-image:asset_url('guide-2-blu.jpg');
         background-color: #2d4654;
@@ -293,44 +298,48 @@
     .card__overlay {
     	position: absolute;
     	border-radius: 50%;
-    	background-color: #111;
+    	background-color: #a148a4;
     	z-index: 2;
     	transition: all .9s;
       cursor: pointer;
     }
 
     .card__overlay--1 {
-    	top: calc(50% - 1.5px);
-    	left: calc(50% - 1.5px);
-    	width: 3px;
-    	height: 3px;
-    	opacity: .6;
+    	top: calc(36% - 3px);
+    	left: calc(50% - 3px);
+    	width: 6px;
+    	height: 6px;
+    	opacity: .8;
     	transition: all .3s ease;
+      z-index: 3;
     }
 
     .card__overlay--2 {
-    	top: calc(50% - 12.5px);
-    	left: calc(50% - 12.5px);
-    	width: 25px;
-    	height: 25px;
-    	opacity: .4;
+    	top: calc(36% - 22px);
+    	left: calc(50% - 22px);
+    	width: 44px;
+      background-color: #138890;
+    	height: 44px;
+    	opacity: .5;
     	transition: all .6s ease;
+      z-index: 2;
     }
 
     .card__overlay--3 {
-    	top: calc(50% - 25px);
-    	left: calc(50% - 25px);
-    	width: 50px;
-    	height: 50px;
-    	opacity: .2;
+      z-index: 1;
+    	top: calc(36% - 37.5px);
+    	left: calc(50% - 37.5px);
+    	width: 75px;
+    	height: 75px;
+    	opacity: .4;
     	transition: all .9s ease;
     }
   }
   @keyframes pulse {
   	0% { box-shadow: none;}
-  	25% { box-shadow: 0 0 0 6px #002f5a; }
-    50% { box-shadow: 0 0 0 12px #202f3d; }
-  	75% { box-shadow: 0 0 0 6px #002f5a; }
+  	25% { box-shadow: 0 0 0 9px #002f5a; }
+    50% { box-shadow: 0 0 0 18px #202f3d; }
+  	75% { box-shadow: 0 0 0 9px #002f5a; }
   	100% { box-shadow: none;}
   }
   @keyframes slideDown {

@@ -11,7 +11,7 @@
       .row__inner
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/inman-article-online-reputation-hero-image-450x200.jpg"}/
+            =image_tag 'article1.jpg', :class => 'tile__img'
           .tile-headline
             5 ways to improve your business and work-life balance
           .tile__details
@@ -23,7 +23,7 @@
 
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/remax-hero-1-450x200.png"}/
+            =image_tag 'article2.jpg', :class => 'tile__img'
           .tile-headline
             Trelora launches in Seattle with unpopular marketing stunt
           .tile__details
@@ -35,7 +35,7 @@
 
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2016/05/Kusska_394645039-450x200.jpg"}/
+            =image_tag 'article3.jpg', :class => 'tile__img'
           .tile-headline
             Real estate startups make a splash on Forbes Fintech 50
           .tile__details
@@ -49,7 +49,7 @@
           %span.recirc-sponsored-tag
             sponsored content
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/01/Inman-TomFerry-Week4-BannerImage-1400x788.jpg"}/
+            =image_tag 'article4.jpg', :class => 'tile__img'
           .tile-headline
             Real estate sales Jedi mind tricks
           .tile__details
@@ -60,7 +60,7 @@
               =link_to 'read >', '#'
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/Photo-by-NeONBRAND-on-Unsplash-450x200.png"}/
+            =image_tag 'article5.jpg', :class => 'tile__img'
           .tile-headline
             10 hidden Facebook features all agents should know
           .tile__details
@@ -71,7 +71,7 @@
               =link_to 'read >', '#'
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/Untitled-design-22-1400x621.png"}/
+            =image_tag 'article6.jpg', :class => 'tile__img'
           .tile-headline
             White House budget plan seeks deep cuts to housing programs
           .tile__details
@@ -82,7 +82,7 @@
               =link_to 'read >', '#'
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/Untitled-design-19-450x200.png"}/
+            =image_tag 'article7.jpg', :class => 'tile__img'
           .tile-headline
             Tell real estate leaders what you really think
           .tile__details
@@ -93,7 +93,7 @@
               =link_to 'read >', '#'
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/Hero-Image-C21-450x200.jpg"}/
+            =image_tag 'article8.jpg', :class => 'tile__img'
           .tile-headline
             3 lead generation strategies that keep on giving
           .tile__details
@@ -104,7 +104,7 @@
               =link_to 'read >', '#'
         .tile
           .tile__media
-            %img.tile__img{:alt => "", :src => "https://inmannews-wpengine.netdna-ssl.com/wp-content/uploads/2018/02/technology-good-bad-ugly-hero-2F-ICNY-18-Kaliya-Warren-450x200.png"}/
+            =image_tag 'article9.jpg', :class => 'tile__img'
           .tile-headline
             6 phases to real estate mastery
           .tile__details
@@ -185,17 +185,12 @@
               %br
               =link_to 'read >', '#'
   %h3
-    Technology Guides
-    %span
-      more guides:
-      =link_to 'startups,', "#"
-      =link_to 'innovation,', "#"
-      =link_to 'venture capital', "#"
+    Inman
+    %span Guides
   %ul.guides
     %li.card.radio-tower
       .guide-under
       .guide-headline
-        Lorem Ipsum Dolor Amet Barrum
       = render :partial => "static_pages/guides/radio_tower"
     %li.card
       .guide-headline
@@ -205,7 +200,6 @@
     %li.card.water-stomp
       .guide-under
       .guide-headline
-        Ut Enim ad Minim Veniam, quis Nostrud
       = render :partial => "static_pages/guides/water_stomp"
     %li.card
       .guide-headline

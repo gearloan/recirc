@@ -5,7 +5,9 @@ $( document ).ready(function() {
   });
   $( ".card" ).hover(
     function() {
-      $( this ).addClass( "hover-trigger" );
+      if (!$(this).hasClass("guide-trigger")) {
+        $( this ).addClass( "hover-trigger" );
+      }
     }, function() {
       $( this ).removeClass( "hover-trigger" );
     }
