@@ -216,7 +216,7 @@
     }
     &:nth-child(2) {
       background-image:asset_url('guide-2.png');
-      background-size: cover;
+      background-size: contain;
       .guide-headline {
         background-image:asset_url('guide-cards-2.png');
         background-size:contain;
